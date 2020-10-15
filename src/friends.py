@@ -25,3 +25,10 @@ def total_money(list):
 def l_money(ler, lee, amount):
     ler["monies"] -= (amount)
     lee["monies"] += (amount)
+
+def all_favourite_foods(list):
+    food = []
+    for person in list:
+        for snack in list["favourites"]:
+            food.append(person["snacks"])
+    return food
