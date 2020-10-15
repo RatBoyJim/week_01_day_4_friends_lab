@@ -12,15 +12,16 @@ def likes_to_eat(person, food):
 
 def add_friend(person, friend):
     person["friends"].append(friend)
-    print(len(person["friends"]))
 
 def remove_friend(person, friend):
     person["friends"].remove(friend)
-    print(len(person["friends"]))
 
 def total_money(list):
     monies = 0
     for person in list:
         monies += person["monies"]
     return monies
-
+    
+def l_money(ler, lee, amount):
+    ler["monies"] -= (amount)
+    lee["monies"] += (amount)
