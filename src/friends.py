@@ -1,11 +1,11 @@
 def get_name(name):
    return name["name"]
 
-def get_favourite_tv_show(show):
-    return show["tv_show"]
+def get_favourite_tv_show(person):
+    return person["favourites"]["tv_show"]
 
-def test_person_likes_food__True(food, person):
-    if person["snacks"] == food:
-        return True
-    else:
-        return False
+def likes_to_eat(person, food):
+    for snack in person["favourites"]["snacks"]:
+        if snack == food:
+            return True
+    return False
